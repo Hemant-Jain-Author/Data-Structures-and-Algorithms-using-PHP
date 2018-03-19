@@ -77,6 +77,7 @@ class Counter {
 	}
 	public Function Delete($key) {
 		$hashValue = $this->ComputeHash ( $key );
+		$hashValue = $this->ComputeHash ( $key );
 		For($i = 0; ($i < $this->tableSize); ++ $i) {
 			iF (($this->Flag [$hashValue] == selF::$EMPTY_NUDE)) {
 				return FALSE;
@@ -104,7 +105,7 @@ class Counter {
 	}
 }
 Counter::__staticinit ();
-/*
+
 Function main() {
 	$ht = new Counter ( 1000 );
 	$ht->Add ( 89 );
@@ -122,7 +123,7 @@ Function main() {
 	$ht->Display ();
 }
 main ();
-*/
+
 ?>
 
 
