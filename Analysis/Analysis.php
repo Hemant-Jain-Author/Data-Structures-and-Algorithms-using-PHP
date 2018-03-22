@@ -5,6 +5,7 @@ Function Fun1($n) {
 	$m += 1;
 	return $m;
 }
+
 Function Fun2($n) {
 	$i = null;
 	$j = null;
@@ -14,6 +15,7 @@ Function Fun2($n) {
 	$m += 1;
 	return $m;
 }
+
 Function Fun3($n)
 {
 	$i = null;
@@ -24,6 +26,7 @@ Function Fun3($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun4($n)
 {
 	$i = null;
@@ -35,6 +38,7 @@ Function Fun4($n)
 	}
 	return $m;
 }
+
 Function Fun5($n)
 {
 	$i = null;
@@ -46,6 +50,7 @@ Function Fun5($n)
 	}
 	return $m;
 }
+
 Function Fun6($n)
 {
 	$i = null;
@@ -58,6 +63,7 @@ Function Fun6($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun7($n)
 {
 	$i = null;
@@ -73,6 +79,7 @@ Function Fun7($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun8($n)
 {
 	$i = null;
@@ -83,6 +90,7 @@ Function Fun8($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun9($n)
 {
 	$i = null;
@@ -93,6 +101,7 @@ Function Fun9($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun10($n) 
 {
 	$i = null;
@@ -103,6 +112,7 @@ Function Fun10($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun11($n) // [int n]
 {
 	$i = null;
@@ -115,6 +125,7 @@ Function Fun11($n) // [int n]
 	$m += 1;
 	return $m;
 }
+
 Function Fun12($n) 
 {
 	$i = null;
@@ -125,6 +136,7 @@ Function Fun12($n)
 	$m += 1;
 	return $m;
 }
+
 Function Fun13($n) 
 {
 	$i = null;
@@ -150,5 +162,4 @@ echo Fun10(100) . "<br/>";
 echo Fun11(100) . "<br/>";
 echo Fun12(100) . "<br/>";
 echo Fun13(100) . "<br/>";
-
 ?>

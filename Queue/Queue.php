@@ -47,14 +47,12 @@ class Queue {
 	}
 	
 }
-Function main() {
-	$que = new Queue ();
-	for($i = 0; ($i < 20); ++ $i) {
-		$que->add ( $i );
-	}
-	for($i = 0; ($i < 22); ++ $i) {
-		echo ($que->remove ()."<br/>");
-	}
+
+$que = new Queue ();
+for($i = 0; ($i < 20); ++ $i) {
+	$que->add ( $i );
 }
-main();
+for($i = 0; ($i < 22); ++ $i) {
+	echo ($que->remove ()."<br/>");
+}
 ?>

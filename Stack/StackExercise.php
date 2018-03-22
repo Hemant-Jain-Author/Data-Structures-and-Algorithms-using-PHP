@@ -33,8 +33,8 @@ Function isBalancedParenthesis($expn) {
 Function main1() {
 	$expn = "{()}[";
 	$value = isBalancedParenthesis ( $expn ) ? "Balanced" : "UnBalanced";
-	echo ("Given Expn:" . $expn);
-	echo ("Result after isBalancedParenthesis:" . $value);
+	echo ("<br/> Given Expn:" . $expn);
+	echo ("<br/> Result after isBalancedParenthesis:" . $value);
 }
 Function insertAtBottom(&$stk, $value) {
 	if (count ( $stk ) == 0) {
@@ -105,8 +105,8 @@ Function postFixEvaluate($expn) { // / tokenizer code needed.
 Function main4() {
 	$expn = "6 5 2 3 + 8 * + 3 + *";
 	$value = postFixEvaluate ( $expn );
-	echo ("Given PostFixExpn: " . $expn . "<br/>");
-	echo ("Result after evaluation: " . $value . "<br/>");
+	echo ("<br/> Given PostFixExpn: " . $expn . "<br/>");
+	echo ("<br/> Result after evaluation: " . $value . "<br/>");
 }
 Function precedence($x) {
 	if ($x == '(') {
@@ -123,7 +123,6 @@ Function precedence($x) {
 	return (4);
 }
 Function printArray($arr) {
-	echo ("<br/> Data of aray are :: ");
 	$count = count ( $arr );
 	For($i = 0; $i < $count; ++ $i) {
 		echo (" " . $arr [$i]);
@@ -178,8 +177,8 @@ Function infixToPostfix($expn) {
 Function main5() {
 	$expn = "10+((8))*5/(15-4)";
 	$value = infixToPostfix ( $expn );
-	echo ("InFixExpn: " . $expn);
-	echo ("PostFixExpn: " . $value);
+	echo ("<br/> InFixExpn: " . $expn);
+	echo ("<br/> PostFixExpn: " . $value);
 }
 Function infixToPrefix($expn) {
 	reverseString ( $expn );
@@ -215,8 +214,8 @@ Function reverseString(&$expn) {
 Function main6() {
 	$expn = "10+((3))*5/(16-4)";
 	$value = infixToPrefix ( $expn );
-	echo ("Expression: " . $expn);
-	echo ("PreFix Expn: " . $value);
+	echo ("<br/> Expression: " . $expn);
+	echo ("<br/> PreFix Expn: " . $value);
 }
 Function StockSpanRange($arr) {
 	$SR = Array ();
@@ -255,7 +254,7 @@ Function main7() {
 			65,
 			90 
 	);
-	echo ("StockSpanRange : ");
+	echo ("<br/> StockSpanRange : ");
 	printArray ( StockSpanRange ( $arr ) );
 	echo ("<br/>");
 	echo ("StockSpanRange2 : ");
@@ -321,5 +320,12 @@ Function main8() {
 	echo ("GetMaxArea2 : " . GetMaxArea2 ( $arr ) . "<br/>");
 	return 0;
 }
+main1 ();
+main2 ();
+main3 ();
+main4 ();
+main5 ();
+main6 ();
+main7 ();
 main8 ();
 ?>

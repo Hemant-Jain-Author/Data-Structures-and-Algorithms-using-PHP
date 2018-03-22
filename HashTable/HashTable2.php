@@ -77,28 +77,27 @@ class HashTable {
 	}
 }
 HashTable::__staticinit ();
-Function main() {
-	$ht = new HashTable ( 1000 );
-	$ht->InsertNode ( 89 );
-	$ht->InsertNode ( 18 );
-	$ht->InsertNode ( 49 );
-	$ht->InsertNode ( 58 );
-	$ht->InsertNode ( 69 );
-	$ht->InsertNode ( 89 );
-	$ht->InsertNode ( 18 );
-	$ht->InsertNode ( 49 );
-	$ht->InsertNode ( 58 );
-	$ht->InsertNode ( 69 );
-	$ht->Display ();
+
+$ht = new HashTable ( 1000 );
+$ht->InsertNode ( 89 );
+$ht->InsertNode ( 18 );
+$ht->InsertNode ( 49 );
+$ht->InsertNode ( 58 );
+$ht->InsertNode ( 69 );
+$ht->InsertNode ( 89 );
+$ht->InsertNode ( 18 );
+$ht->InsertNode ( 49 );
+$ht->InsertNode ( 58 );
+$ht->InsertNode ( 69 );
+$ht->Display ();
 	
-	$ht->DeleteNode ( 89 );
-	$ht->DeleteNode ( 18 );
-	$ht->DeleteNode ( 49 );
-	$ht->DeleteNode ( 58 );
-	$ht->DeleteNode ( 69 );
-	$ht->Display ();
-}
-main ();
+$ht->DeleteNode ( 89 );
+$ht->DeleteNode ( 18 );
+$ht->DeleteNode ( 49 );
+$ht->DeleteNode ( 58 );
+$ht->DeleteNode ( 69 );
+$ht->Display ();
+
 ?>
 
 

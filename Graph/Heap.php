@@ -18,7 +18,7 @@ class Heap {
 				array_push ( $this->arr, $val );
 		}
 		
-		$this->size = count ( $arrIn );
+		$this->size = ($arrIn == NULL) ? 0 : count ( $arrIn );
 		
 		for($i = ( int ) ($this->size / 2); $i > 0; $i --) {
 			$this->proclateDown ( $i );

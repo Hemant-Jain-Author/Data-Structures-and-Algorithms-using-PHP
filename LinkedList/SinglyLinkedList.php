@@ -371,54 +371,52 @@ class LinkedList {
 		$secondPtr->next = NULL;
 	}
 }
-Function main() {
-	$ll = new LinkedList ();
-	$ll->addHead ( 3 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 1 );
-	$ll->addHead ( 1 );
-	$ll->addHead ( 3 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 1 );
-	$ll->addHead ( 1 );
-	
-	// $ll->display ();
-	//$ll->removeDuplicate();
-	$ll->display ();
-	echo ("length :: " . $ll->size()."<br/>");
-	$ll->sortedInsert ( 2 );
-	$ll->sortedInsert ( 3 );
-	echo ("length :: " . $ll->size()."<br/>");
-	echo ("length :: " . $ll->FindLength()."<br/>");
-	
-	$ll->display ();
-	// $ll->reverse();
-	// $ll->display ();
-	
-	// $ll->makeLoop();
-	// echo ($ll->loopDetect()? "found" : "not found");
-	// echo ($ll->isPresent ( 2) ? "found" : "not found");
-	// $ll->FreeList ();
-	// echo ($ll->isEmpty()?"empty":"not empty");
-	
-	// $ll->display ();
-	// echo ($ll->nthNodeFromBegining ( 2 ) . "<br/>");
-	// echo ($ll->nthNodeFromEnd ( 2 ) . "<br/>");
-	// echo ($ll->nthNodeFromEnd2 ( 2 ) . "<br/>");
-	// $ll->deleteNode(2);
-	// $ll->deleteNodes(3);
-	// echo ("length is :: " . $ll->FindLength());
-	// $ll2 = $ll->copyListReversed();
-	// $ll->display();
-	// $ll2->display();
-	// $ll2 = $ll->copyList ();
-	// $ll->FreeList ();
-	// $ll2->FreeList();
-	// $ll2->display ();
-}
-main ();
+
+$ll = new LinkedList ();
+$ll->addHead ( 3 );
+$ll->addHead ( 2 );
+$ll->addHead ( 2 );
+$ll->addHead ( 2 );
+$ll->addHead ( 1 );
+$ll->addHead ( 1 );
+$ll->addHead ( 3 );
+$ll->addHead ( 2 );
+$ll->addHead ( 2 );
+$ll->addHead ( 2 );
+$ll->addHead ( 1 );
+$ll->addHead ( 1 );
+
+$ll->display ();
+$ll->removeDuplicate();
+$ll->display ();
+echo ("length :: " . $ll->size()."<br/>");
+$ll->sortedInsert ( 2 );
+$ll->sortedInsert ( 3 );
+echo ("length :: " . $ll->size()."<br/>");
+echo ("length :: " . $ll->FindLength()."<br/>");
+
+$ll->display ();
+// $ll->reverse();
+// $ll->display ();
+
+// $ll->makeLoop();
+// echo ($ll->loopDetect()? "found" : "not found");
+// echo ($ll->isPresent ( 2) ? "found" : "not found");
+// $ll->FreeList ();
+// echo ($ll->isEmpty()?"empty":"not empty");
+
+// $ll->display ();
+// echo ($ll->nthNodeFromBegining ( 2 ) . "<br/>");
+// echo ($ll->nthNodeFromEnd ( 2 ) . "<br/>");
+// echo ($ll->nthNodeFromEnd2 ( 2 ) . "<br/>");
+// $ll->deleteNode(2);
+// $ll->deleteNodes(3);
+// echo ("length is :: " . $ll->FindLength());
+// $ll2 = $ll->copyListReversed();
+// $ll->display();
+// $ll2->display();
+// $ll2 = $ll->copyList ();
+// $ll->FreeList ();
+// $ll2->FreeList();
+// $ll2->display ();
 ?>

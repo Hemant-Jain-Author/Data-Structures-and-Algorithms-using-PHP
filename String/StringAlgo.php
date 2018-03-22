@@ -22,7 +22,9 @@ Function main1() {
 	$str = "hello world";
 	echo ((matchExp ( $exp, $str )) ? "found" : "not found");
 }
-// main1 ();
+main1 ();
+echo("<br/>");
+
 Function match($source, $pattern) {
 	$sourceLen = strlen ( $source );
 	$patternLen = strlen ( $pattern );
@@ -42,7 +44,9 @@ Function main2() {
 	$str = "hello woyyyyyrlxxxxxxxd";
 	echo ((match ( $str, $exp )) ? "found" : "not found");
 }
-// main2 ();
+main2 ();
+echo("<br/>");
+
 Function isPrime($n) {
 	$answer = ((($n > 1) ? TRUE : FALSE));
 	for($i = 2; (($i * $i) < $n); $i ++) {
@@ -57,7 +61,9 @@ Function main3() {
 	$n = 101;
 	echo ((isPrime ( $n )) ? "true" : "false");
 }
-// main3 ();
+main3 ();
+echo("<br/>");
+
 Function myAtoi($str) {
 	$value = 0;
 	$size = strlen ( $str );
@@ -71,7 +77,9 @@ Function main4() {
 	$n = "101";
 	echo (myAtoi ( $n ));
 }
-// main4();
+main4();
+echo("<br/>");
+
 Function isUniqueChar($str) {
 	$bitarr = Array ();
 	for($i = 0; ($i < 26); $i ++) {
@@ -100,7 +108,9 @@ Function isUniqueChar($str) {
 	echo ("No duplicate detected!<br/>");
 	return TRUE;
 }
-// echo (isUniqueChar ( "helol" ) ? "unique" : "duplicate");
+echo (isUniqueChar ( "helol" ) ? "unique" : "duplicate");
+echo("<br/>");
+
 Function isPermutation($s1, $s2) {
 	$lenArr = Array ();
 	$length1 = strlen ( $s1 );
@@ -127,7 +137,9 @@ Function isPermutation($s1, $s2) {
 	echo ("is permutation return true<br/>");
 	return TRUE;
 }
-// echo (isPermutation("hello","elhl") ? "true" : "false");
+echo (isPermutation("hello","elhl") ? "true" : "false");
+echo("<br/>");
+
 Function isPalindrome($str) {
 	$i = 0;
 	$j = (strlen ( $str ) - 1);
@@ -143,7 +155,9 @@ Function isPalindrome($str) {
 		return TRUE;
 	}
 }
-// isPalindrome ( "applelaelppa" );
+isPalindrome ( "applelaelppa" );
+echo("<br/>");
+
 Function pow2($base, $exp) {
 	$value = 0;
 	if ($exp == 0) {
@@ -158,7 +172,9 @@ Function pow2($base, $exp) {
 		}
 	}
 }
-// echo ("power :: " . pow2 ( 4, 4 ));
+echo ("power :: " . pow2 ( 4, 4 ));
+echo("<br/>");
+
 Function myStrcmp($a, $b) {
 	$index = 0;
 	$len1 = strlen ( $a );
@@ -184,7 +200,9 @@ Function myStrcmp($a, $b) {
 		}
 	}
 }
-// echo (myStrcmp("cpplez", "cpplewww"));
+echo (myStrcmp("cpplez", "cpplewww"));
+echo("<br/>");
+
 Function reverseString(&$a) {
 	$lower = 0;
 	$upper = (strlen ( $a ) - 1);
@@ -202,7 +220,9 @@ Function main7() {
 	reverseString ( $st );
 	echo ($st);
 }
-// main7();
+main7();
+echo("<br/>");
+
 Function reverseString2(&$a, $lower, $upper) {
 	$tempChar = null;
 	while ( ($lower < $upper) ) {
@@ -234,5 +254,6 @@ Function main8() {
 	reversewords ( $st );
 	echo ($st);
 }
-// main8 ();
+main8 ();
+
 ?>

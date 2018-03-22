@@ -11,7 +11,6 @@ class Node {
 }
 Function printArray(&$arr) {
 	$count = count ( $arr );
-	echo ("Values stored in array are : ");
 	For($i = 0; $i < $count; ++ $i) {
 		echo (" " . $arr [$i]);
 	}
@@ -57,6 +56,7 @@ class Tree {
 	public Function PrintPreOrder() {
 		echo ("<br/>" . "PrintPreOrder" . "<br/>");
 		$this->PrintPreOrderUtil ( $this->root );
+		echo ("<br/>");
 	}
 	protected Function PrintPreOrderUtil($node) {
 		if ($node != NULL) {
@@ -82,6 +82,7 @@ class Tree {
 	public Function PrintPostOrder() {
 		echo ("<br/>" . "PrintPostOrder" . "<br/>");
 		$this->PrintPostOrderUtil ( $this->root );
+		echo ("<br/>");
 	}
 	protected Function PrintPostOrderUtil($node) {
 		if ($node != NULL) {
@@ -106,6 +107,7 @@ class Tree {
 	public Function PrintInOrder() {
 		echo ("<br/>" . "PrintInOrder" . "<br/>");
 		$this->PrintInOrderUtil ( $this->root );
+		echo ("<br/>");
 	}
 	protected Function PrintInOrderUtil($node) {
 		if ($node != NULL) {
@@ -442,8 +444,9 @@ class Tree {
 	protected Function treeToListRecUtil($curr) {
 		$Head = NULL;
 		$Tail = NULL;
-		if ($curr != NULL)
+		if ($curr == NULL)
 			return NULL;
+
 		if (($curr->lChild != NULL) && ($curr->rChild != NULL)) {
 			$curr->lChild = $curr;
 			$curr->rChild = $curr;
@@ -552,6 +555,7 @@ class Tree {
 	public Function printInRange($min, $max) {
 		echo ("PrintInRange($min, $max) :: ");
 		$this->printInRangeUtil ( $this->root, $min, $max );
+		echo ("<br/>");
 	}
 	protected Function printInRangeUtil($root, $min, $max) {
 		if ($root == NULL)
@@ -559,7 +563,7 @@ class Tree {
 		
 		$this->printInRangeUtil ( $root->lChild, $min, $max );
 		if (($root->value >= $min) && ($root->value <= $max))
-			echo ($root->value);
+			echo ($root->value . " ");
 		
 		$this->printInRangeUtil ( $root->rChild, $min, $max );
 	}
@@ -646,75 +650,67 @@ class Tree {
 		return $curr;
 	}
 }
-Function main() // [String[] args]
-{
-	$t = new Tree ();
-	$arr = array (
-			1,
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9,
-			10 
-	);
-	// $t->levelOrderBinaryTree ( $arr );
-	$t->CreateBinaryTree ( $arr );
+
+$t = new Tree ();
+$arr = array (
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10 
+);
+// $t->levelOrderBinaryTree ( $arr );
+$t->CreateBinaryTree ( $arr );
 	
-	/*
-	 * $t->PrintInOrder ();
-	 * $t->printAllPath ();
-	 * $t->printInRange ( 3, 9 );
-	 * $t->PrintPostOrder ();
-	 * $t->PrintPreOrder ();
-	 * $t->numNodes ();
-	 */
-	/*
-	 * $t2 = $t->CopyMirrorTree ();
-	 * $t3 = $t->CopyTree ();
-	 * $t2->PrintInOrder ();
-	 * $t3->PrintInOrder ();
-	 * echo ("<br/>" . (($t->Find ( 17 )) ? "found" : "not found"));
-	 * echo ("<br/>" . (($t->Find2 ( 17 )) ? "found" : "not found"));
-	 * echo ("<br/>" . $t->FindMax ());
-	 * echo ("<br/>" . $t->FindMaxBT ());
-	 * echo ("<br/>" . $t->FindMin ());
-	 */
-	/*
-	 * echo ("floorBst " . $t->FloorBST ( 8.5 ));
-	 * $t->PrintInOrder ();
-	 * $t->InsertNode ( 11 );
-	 * $t->PrintInOrder ();
-	 * echo ("<br/>" . (($t->isBST ()) ? "true" : "false"));
-	 * echo ("<br/>" . (($t->isBST2 ()) ? "true" : "false"));
-	 * echo ("<br/>" . (($t->isBST3 ()) ? "true" : "false"));
-	 * $t->Free();
-	 * $t->PrintInOrder ();
-	 */
-	/*
-	 *
-	 * $t3 = $t->CopyTree ();
-	 * $t3->InsertNode ( 12 );
-	 * echo ("<br/>" . (($t->isEqual ( $t3 )) ? "equal" : "not equal"));
-	 * $t->maxLengthPathBT ();
-	 * $t->PrintInOrder ();
-	 * echo ("<br/>NthInOrder(5)" . $t->NthInOrder ( 5 ));
-	 * $t->PrintPostOrder ();
-	 * echo ("<br/>NthPostOrder(5)" . $t->NthPostOrder ( 5 ));
-	 * $t->PrintPreOrder ();
-	 * echo ("<br/>NthPreOrder(5)" . $t->NthPreOrder ( 5 ));
-	 */
-	/*
-	 * echo ("<br/>numFullNodesBT()" . $t->numFullNodesBT ());
-	 * echo ("<br/>numLeafNodes()" . $t->numLeafNodes ());
-	 * echo ("<br/>numNodes()" . $t->numNodes ());
-	 * echo ("<br/>sumAllBT()" . $t->sumAllBT ());
-	 * echo ("<br/>TreeDepth()" . $t->TreeDepth ());
-	 */
-	$t->treeToListRec();
-}
-main ();
+	
+ $t->PrintInOrder ();
+ $t->printAllPath ();
+ $t->printInRange ( 3, 9 );
+ $t->PrintPostOrder ();
+ $t->PrintPreOrder ();
+ $t->numNodes ();
+
+ $t2 = $t->CopyMirrorTree ();
+ $t3 = $t->CopyTree ();
+ $t2->PrintInOrder ();
+ $t3->PrintInOrder ();
+ echo ("<br/>" . (($t->Find ( 17 )) ? "found" : "not found"));
+ echo ("<br/>" . (($t->Find2 ( 17 )) ? "found" : "not found"));
+ echo ("<br/>" . $t->FindMax ());
+ echo ("<br/>" . $t->FindMaxBT ());
+ echo ("<br/>" . $t->FindMin ());
+ 
+echo ("floorBst " . $t->FloorBST ( 8.5 ));
+$t->PrintInOrder ();
+$t->InsertNode ( 11 );
+$t->PrintInOrder ();
+echo ("<br/>" . (($t->isBST ()) ? "true" : "false"));
+echo ("<br/>" . (($t->isBST2 ()) ? "true" : "false"));
+echo ("<br/>" . (($t->isBST3 ()) ? "true" : "false"));
+$t2->Free();
+$t2->PrintInOrder ();
+	
+$t3 = $t->CopyTree ();
+echo ("<br/>" . (($t->isEqual ( $t3 )) ? "equal" : "not equal"));
+$t3->InsertNode ( 12 );
+echo ("<br/>" . (($t->isEqual ( $t3 )) ? "equal" : "not equal"));
+$t->maxLengthPathBT ();
+$t->PrintInOrder ();
+echo ("<br/>NthInOrder(5)" . $t->NthInOrder ( 5 ));
+$t->PrintPostOrder ();
+echo ("<br/>NthPostOrder(5)" . $t->NthPostOrder ( 5 ));
+$t->PrintPreOrder ();
+echo ("<br/>NthPreOrder(5)" . $t->NthPreOrder ( 5 ));
+	
+echo ("<br/>numFullNodesBT()" . $t->numFullNodesBT ());
+echo ("<br/>numLeafNodes()" . $t->numLeafNodes ());
+echo ("<br/>numNodes()" . $t->numNodes ());
+echo ("<br/>sumAllBT()" . $t->sumAllBT ());
+echo ("<br/>TreeDepth()" . $t->TreeDepth ());
+$t->treeToListRec();
 ?>

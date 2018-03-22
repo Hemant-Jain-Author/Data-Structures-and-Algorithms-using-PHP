@@ -26,11 +26,8 @@ class Calculator {
 		$this->value -= 1;
 	}
 }
-Function main(){
-	$ct = new Calculator(30);
-	$ct->add(50);$ct->subtract(10);$ct->increment();
-	echo ($ct->getValue());
-	
-}
-main();
+
+$ct = new Calculator(30);
+$ct->add(50);$ct->subtract(10);$ct->increment();
+echo ($ct->getValue());
 ?>

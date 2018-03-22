@@ -61,19 +61,15 @@ class TST {
 	}
 }
 
-Function main() {
-	$tt = new TST();
-	$tt->insert_String ( "banana" );
-	$tt->insert_String ( "apple" );
-	$tt->insert_String ( "mango" );
-	echo ("\nSearch results For apple, banana, grapes and mango :<br/>");
-	$tt->Find_String ( "apple" );
-	$tt->Find_String ( "banana" );
-	$tt->Find_String ( "mango" );
-	$tt->Find_String ( "grapes" );
-}
-
-main ();
+$tt = new TST();
+$tt->insert_String ( "banana" );
+$tt->insert_String ( "apple" );
+$tt->insert_String ( "mango" );
+echo ("\nSearch results For apple, banana, grapes and mango :<br/>");
+$tt->Find_String ( "apple" );
+$tt->Find_String ( "banana" );
+$tt->Find_String ( "mango" );
+$tt->Find_String ( "grapes" );
 ?>
 
 

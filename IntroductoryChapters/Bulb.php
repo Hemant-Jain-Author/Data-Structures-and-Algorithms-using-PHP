@@ -51,21 +51,18 @@ class AdvanceBulb extends Bulb {
 		$this->intensity = $i;
 	}
 }
-Function main() {
-	$b = new Bulb ();
-	if ($b->isOnFun ())
-		echo ("bulb is en return : true<br/>");
-	else
-		echo ("bulb is en return : false<br/>");
-	$b->turnOn ();
-	if ($b->isOnFun ())
-		echo ("bulb is en return : true<br/>");
-	else
-		echo ("bulb is en return : false<br/>");
-	$c = new Bulb ();
-	$d = new Bulb ();
-	echo ("bulb count is : " . Bulb::getBulbCount () . "<br/>");
-}
-main ();
 
+$b = new Bulb ();
+if ($b->isOnFun ())
+	echo ("bulb is en return : true<br/>");
+else
+	echo ("bulb is en return : false<br/>");
+$b->turnOn ();
+if ($b->isOnFun ())
+	echo ("bulb is en return : true<br/>");
+else
+	echo ("bulb is en return : false<br/>");
+$c = new Bulb ();
+$d = new Bulb ();
+echo ("bulb count is : " . Bulb::getBulbCount () . "<br/>");
 ?>

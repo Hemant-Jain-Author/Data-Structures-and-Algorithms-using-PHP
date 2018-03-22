@@ -87,28 +87,26 @@ class StringTree {
 		}
 	}
 }
-Function main() {
-	$tt = new StringTree ();
-	$tt->Insert ( "banana" );
-	$tt->Insert ( "apple" );
-	$tt->Insert ( "mango" );
-	$tt->Insert ( "banana" );
-	$tt->Insert ( "apple" );
-	$tt->Insert ( "mango" );
-	echo ("Search results For apple, banana, grapes and mango :<br/>");
+
+$tt = new StringTree ();
+$tt->Insert ( "banana" );
+$tt->Insert ( "apple" );
+$tt->Insert ( "mango" );
+$tt->Insert ( "banana" );
+$tt->Insert ( "apple" );
+$tt->Insert ( "mango" );
+echo ("Search results For apple, banana, grapes and mango :<br/>");
 	
-	$tt->Find ( "apple" );
-	$tt->Find ( "banana" );
-	$tt->Find ( "banan" );
-	$tt->Find ( "napplkhjkhkju" );
-	$tt->Find ( "grapes" );
-	$tt->Find ( "mango" );
-	$tt->Display ();
-	
-	$tt->Frequency ( "apple" );
-	$tt->Frequency ( "banana" );
-	$tt->Frequency ( "mango" );
-	$tt->Frequency ( "hemant" );
-}
-main ();
+$tt->Find ( "apple" );
+$tt->Find ( "banana" );
+$tt->Find ( "banan" );
+$tt->Find ( "napplkhjkhkju" );
+$tt->Find ( "grapes" );
+$tt->Find ( "mango" );
+$tt->Display ();
+
+$tt->Frequency ( "apple" );
+$tt->Frequency ( "banana" );
+$tt->Frequency ( "mango" );
+$tt->Frequency ( "hemant" );
 ?>

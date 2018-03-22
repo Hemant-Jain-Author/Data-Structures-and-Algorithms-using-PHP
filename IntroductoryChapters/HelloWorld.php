@@ -1,6 +1,3 @@
 <?php
-Function main() {
-	echo ("Hello, world!");
-}
-main();
+echo ("Hello, world!");
 ?>

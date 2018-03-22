@@ -28,23 +28,21 @@ class QueueUsingStack {
 		}
 	}
 }
-Function main() {
-	$que = new QueueUsingStack ();
-	$que->add ( 1 );
-	$que->add ( 11 );
-	$que->add ( 111 );
-	echo ($que->remove ());
-	$que->add ( 2 );
-	$que->add ( 21 );
-	$que->add ( 211 );
-	echo ($que->remove ());
-	echo ($que->remove ());
-	echo ($que->remove ());
-	echo ($que->remove ());
-	echo ($que->remove ());
-	echo ($que->remove ());
-}
-main ();
+
+$que = new QueueUsingStack ();
+$que->add ( 1 );
+$que->add ( 11 );
+$que->add ( 111 );
+echo ($que->remove ());
+$que->add ( 2 );
+$que->add ( 21 );
+$que->add ( 211 );
+echo ($que->remove ());
+echo ($que->remove ());
+echo ($que->remove ());
+echo ($que->remove ());
+echo ($que->remove ());
+echo ($que->remove ());
 ?>
 
 

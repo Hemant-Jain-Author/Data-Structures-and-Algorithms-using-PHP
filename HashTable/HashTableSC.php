@@ -72,15 +72,13 @@ class HashTableSE {
 		return FALSE;
 	}
 }
-Function main() {
-	$ht = new HashTableSE ();
-	For($i = 100; ($i < 110); ++ $i) {
-		$ht->insert ( $i );
-	}
-	echo ("search 100 :: " . $ht->Find ( 100 ));
-	echo ("remove 100 :: " . $ht->delete ( 100 ));
-	echo ("search 100 :: " . $ht->Find ( 100 ));
-	echo ("remove 100 :: " . $ht->delete ( 100 ));
+
+$ht = new HashTableSE ();
+For($i = 100; ($i < 110); ++ $i) {
+	$ht->insert ( $i );
 }
-main ();
+echo ("search 100 :: " . $ht->Find ( 100 ));
+echo ("remove 100 :: " . $ht->delete ( 100 ));
+echo ("search 100 :: " . $ht->Find ( 100 ));
+echo ("remove 100 :: " . $ht->delete ( 100 ));
 ?>

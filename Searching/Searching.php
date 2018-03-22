@@ -1,9 +1,6 @@
 <?php
-/*
- * require_once ("Array.php");
- * require_once ("Set.php");
- * require_once ("Stack.php");
- */
+require_once ("Set.php");
+
 Function linearSearchUnsorted($arr, $value) {
 	$i = 0;
 	$size = count ( $arr );
@@ -29,9 +26,9 @@ Function main() {
 			24 
 	);
 	
-	echo ("linearSearchUnsorted : " . (linearSearchUnsorted ( $first, 14 ) ? "found" : "not found"));
+	echo ("linearSearchUnsorted : " . (linearSearchUnsorted ( $first, 14 ) ? "found" : "not found") . "<br/>");
 }
-// main ();
+main ();
 Function linearSearchSorted($arr, $value) {
 	$size = count ( $arr );
 	$i = 0;
@@ -61,9 +58,9 @@ Function main2() {
 			24 
 	);
 	
-	echo ("linearSearchSorted : " . (linearSearchSorted ( $first, 14 ) ? "found" : "not found"));
+	echo ("linearSearchSorted : " . (linearSearchSorted ( $first, 14 ) ? "found" : "not found") . "<br/>");
 }
-// main2 ();
+main2 ();
 Function BinarySearch($arr, $value) {
 	$size = count ( $arr );
 	$low = 0;
@@ -98,9 +95,9 @@ Function main3() {
 			24 
 	);
 	
-	echo ("BinarySearch : " . (BinarySearch ( $first, 14 ) ? "found" : "not found"));
+	echo ("BinarySearch : " . (BinarySearch ( $first, 14 ) ? "found" : "not found") . "<br/>");
 }
-// main3 ();
+main3 ();
 Function BinarySearchRecursive($arr, $value) {
 	return BinarySearchRecursiveUtil ( $arr, 0, count ( $arr ) - 1, $value );
 }
@@ -134,9 +131,9 @@ Function main4() {
 			24 
 	);
 	
-	echo ("BinarySearchRecursive : " . (BinarySearchRecursive ( $first, 14 ) ? "found" : "not found"));
+	echo ("BinarySearchRecursive : " . (BinarySearchRecursive ( $first, 14 ) ? "found" : "not found") . "<br/>");
 }
-// main4 ();
+main4 ();
 Function printRepeating($arr) {
 	$size = count ( $arr );
 	$i = NULL;
@@ -154,10 +151,10 @@ Function printRepeating2($arr) {
 	$size = count ( $arr );
 	$i = NULL;
 	sort ( $arr );
-	echo (" Repeating elements are :");
+	echo ("<br/>" . " Repeating elements are :");
 	for($i = 1; ($i < $size); ++ $i) {
 		if ($arr [$i] == $arr [$i - 1]) {
-			echo (" " . $arr [$i]);
+			echo (" " . $arr [$i] );
 		}
 	}
 }
@@ -166,12 +163,12 @@ Function printRepeating3($arr) {
 	
 	$hs = new Set ();
 	$i = NULL;
-	echo (" Repeating elements are :");
+	echo ("<br/>" . " Repeating elements are :");
 	for($i = 0; ($i < $size); ++ $i) {
-		if ($hs->contains ( $arr [$i] )) {
+		if ($hs->Find ( $arr [$i] )) {
 			echo (" " . $arr [$i]);
 		} else {
-			$hs->add ( $arr [$i] );
+			$hs->Add ( $arr [$i] );
 		}
 	}
 }
@@ -182,7 +179,7 @@ Function printRepeating4($arr, $range) {
 	for($i = 0; ($i < $range); ++ $i) {
 		$count [$i] = 0;
 	}
-	echo (" Repeating elements are :");
+	echo ("<br/>" . " Repeating elements are :");
 	for($i = 0; ($i < $size); ++ $i) {
 		if ($count [$arr [$i]] == 1) {
 			echo (" " . $arr [$i]);
@@ -210,7 +207,7 @@ Function main5() {
 	// printRepeating3 ( $first );
 	printRepeating4 ( $first, 20 );
 }
-// main5 ();
+main5 ();
 Function getMax($arr) {
 	$size = count ( $arr );
 	$i = NULL;
@@ -288,7 +285,7 @@ Function main6() {
 	echo getMax2 ( $first ) . "<br/>";
 	echo getMax3 ( $first, 20 ) . "<br/>";
 }
-// main6 ();
+main6 ();
 Function getMajority($arr) {
 	$size = count ( $arr );
 	$i = NULL;
@@ -377,11 +374,11 @@ Function main7() {
 			3,
 			4 
 	);
-	echo getMajority ( $first ) . "<br/>";
-	echo getMajority2 ( $first ) . "<br/>";
-	echo getMajority3 ( $first ) . "<br/>";
+	echo "Majority " . getMajority ( $first ) . "<br/>";
+	echo "Majority " . getMajority2 ( $first ) . "<br/>";
+	echo "Majority " . getMajority3 ( $first ) . "<br/>";
 }
-// main7 ();
+main7 ();
 Function FindMissingNumber($arr) {
 	$size = count ( $arr );
 	for($i = 1; ($i <= $size); $i ++) {
@@ -426,7 +423,7 @@ Function main8() {
 	echo FindMissingNumber ( $first ) . "<br/>";
 	echo FindMissingNumber2 ( $first, 12 ) . "<br/>";
 }
-// main8 ();
+main8 ();
 Function FindPair($arr, $value) {
 	$size = count ( $arr );
 	$i = NULL;
@@ -443,7 +440,7 @@ Function FindPair($arr, $value) {
 }
 Function printArray($arr) {
 	$count = count ( $arr );
-	echo ("Values stored in array are : ");
+	echo ("<br/>" . "Values stored in array are : ");
 	For($i = 0; $i < $count; ++ $i) {
 		echo (" " . $arr [$i]);
 	}
@@ -455,7 +452,7 @@ Function FindPair2($arr, $value) {
 	$second = ($size - 1);
 	sort ( $arr );
 	while ( $first < $second ) {
-		echo "value are $arr[$first] and $arr[$second]";
+		echo "<br/>" . "value are $arr[$first] and $arr[$second]";
 		$curr = ($arr [$first] + $arr [$second]);
 		if ($curr == $value) {
 			echo ("The pair is " . $arr [$first] . "," . $arr [$second] . "<br/>");
@@ -472,13 +469,14 @@ Function FindPair2($arr, $value) {
 }
 Function FindPair3($arr, $value) {
 	$size = count ( $arr );
-	$hs = set ();
+	$hs = new Set();
 	for($i = 0; ($i < $size); ++ $i) {
-		if ($hs->contains ( $value - $arr [$i] )) {
-			echo ("The pair is : " . $arr [$i] . " , " . $value - $arr [$i] . "<br/>");
+		$val = $value - $arr[$i];
+		if ($hs->Find ( $val)) {
+			echo ("<br/>" . "The pair is : " . $arr[$i] . " , " . $val . "<br/>");
 			return 1;
 		}
-		$hs->add ( $arr [$i] );
+		$hs->Add ( $arr [$i] );
 	}
 	return 0;
 }
@@ -498,9 +496,9 @@ Function main9() {
 	);
 	echo FindPair ( $first, 16 ) . "<br/>";
 	echo FindPair2 ( $first, 16 ) . "<br/>";
-	// echo FindPair3 ( $first, 16 ) . "<br/>";
+	echo FindPair3 ( $first, 16 ) . "<br/>";
 }
-// main9 ();
+main9 ();
 Function minAbsSumPair($arr) {
 	$size = count ( $arr );
 	if ($size < 2) {
@@ -570,7 +568,7 @@ Function main10() {
 	echo minAbsSumPair ( $first ) . "<br/>";
 	echo minAbsSumPair2 ( $first ) . "<br/>";
 }
-// main10 ();
+main10 ();
 Function SearchBotinioArrayMax($arr) {
 	$size = count ( $arr );
 	$start = 0;
@@ -666,7 +664,7 @@ Function main11() {
 	echo SearchBotinioArrayMax ( $first ) . "<br/>";
 	echo SearchBitonioArray ( $first, 0 ) . "<br/>";
 }
-// main11 ();
+main11 ();
 Function FindKeyCount($arr, $key) {
 	$size = count ( $arr );
 	$count = 0;
@@ -695,7 +693,7 @@ Function main12() {
 	echo FindKeyCount ( $first, 3 ) . "<br/>";
 	echo FindKeyCount2 ( $first, 3 ) . "<br/>";
 }
-// main12 ();
+main12 ();
 Function FindFirstIndex($arr, $start, $end, $key) {
 	$mid = NULL;
 	if (($end < $start)) {
@@ -764,7 +762,7 @@ Function main13() {
 	seperateEvenAndOdd ( $first );
 	printArray ( $first );
 }
-// main13 ();
+main13 ();
 Function maxProfit($stocks) {
 	$size = count ( $stocks );
 	$buy = 0;
@@ -802,7 +800,7 @@ Function main14() {
 	);
 	maxProfit ( $first );
 }
-// main14 ();
+main14 ();
 Function FindMedian($arr) {
 	$size = count ( $arr );
 	sort ( $arr );
@@ -859,7 +857,7 @@ Function main15() {
 	echo (FindMedian ( $first ) . "<br/>");
 	echo (FindMedian2 ( $first, $second ) . "<br/>");
 }
-// main15 ();
+main15 ();
 /*
  * Function min($a, $b) {
  * return (($a > $b) ? $b : $a);
@@ -911,7 +909,7 @@ Function main16() {
 	);
 	echo ("BinarySearch01 index :: " . BinarySearch01 ( $first ) . "<br/>");
 }
-// main16 ();
+main16 ();
 Function BinarySearchRotateArrayUtil($arr, $start, $end, $key) {
 	if ($end < $start) {
 		return - 1;
@@ -951,7 +949,7 @@ Function main17() {
 	);
 	echo ("BinarySearchRotateArray index :: " . BinarySearchRotateArray ( $first, 45 ) . "<br/>");
 }
-// main17();
+main17();
 Function FirstRepeated($arr) {
 	$size = count ( $arr );
 	for($i = 0; ($i < $size); ++ $i) {

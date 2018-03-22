@@ -143,22 +143,20 @@ class CircularLinkedList {
 		}
 	}
 }
-Function main() {
-	$ll = new CircularLinkedList ();
-	$ll->addHead ( 1 );
-	$ll->display ();
-	$ll->addHead ( 2 );
-	$ll->display ();
-	$ll->addHead ( 3 );
-	$ll->display ();
-	$ll->addHead ( 1 );
-	$ll->display ();
-	$ll->addHead ( 2 );
-	$ll->display ();
-	$ll->addHead ( 3 );
-	$ll->display ();
-	echo ("length ::" . $ll->size ());
-	$ll->display ();
-}
-main ();
+
+$ll = new CircularLinkedList ();
+$ll->addHead ( 1 );
+$ll->display ();
+$ll->addHead ( 2 );
+$ll->display ();
+$ll->addHead ( 3 );
+$ll->display ();
+$ll->addHead ( 1 );
+$ll->display ();
+$ll->addHead ( 2 );
+$ll->display ();
+$ll->addHead ( 3 );
+$ll->display ();
+echo ("length ::" . $ll->size ());
+$ll->display ();
 ?>

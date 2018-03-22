@@ -6,8 +6,8 @@ class Heap {
 	public static Function __staticinit() {
 		SElF::$CHPACITY = 15;
 	}
-	Function __construct($arrIn) {
-		if ($arrIn == NULL) {
+	Function __construct($arrIn ) {
+		if ($arrIn == null) {
 			$this->arr = array (1);
 		} else {
 			$this->arr = array ();
@@ -15,8 +15,7 @@ class Heap {
 			foreach ( $arrIn as $val )
 				array_push ( $this->arr, $val );
 		}
-		
-		$this->size = count ( $arrIn );
+		$this->size = $arrIn === null ? 0 :count( $arrIn );
 		
 		for($i = ( int ) ($this->size / 2); $i > 0; $i --) {
 			$this->proclateDown ( $i );
@@ -120,36 +119,35 @@ class Heap {
 }
 
 Heap::__staticinit ();
-Function main() {
-	$a = array (
-			1,
-			9,
-			5,
-			7,
-			8,
-			0,
-			2,
-			4,
-			5,
-			10 
-	);
-	$hp = new Heap ( $a );
-	foreach ( $a as $val )
-		echo $hp->remove () . " ";
-	echo "<br/>";
-	$hp2 = new Heap ( NULL );
-	$hp2->add ( 1 );
-	$hp2->add ( 9 );
-	$hp2->add ( 5 );
-	$hp2->add ( 7 );
-	$hp2->add ( 8 );
-	$hp2->add ( 0 );
-	$hp2->add ( 2 );
-	$hp2->add ( 4 );
-	$hp2->add ( 5 );
-	$hp2->add ( 10 );
-	foreach ( $a as $val )
-		echo $hp2->remove () . " ";
-}
-main ();
+
+$a = array (
+		1,
+		9,
+		5,
+		7,
+		8,
+		0,
+		2,
+		4,
+		5,
+		10 
+);
+
+$hp = new Heap ( $a );
+foreach ( $a as $val )
+	echo $hp->remove () . " ";
+echo "<br/>";
+$hp2 = new Heap ( NULL );
+$hp2->add ( 1 );
+$hp2->add ( 9 );
+$hp2->add ( 5 );
+$hp2->add ( 7 );
+$hp2->add ( 8 );
+$hp2->add ( 0 );
+$hp2->add ( 2 );
+$hp2->add ( 4 );
+$hp2->add ( 5 );
+$hp2->add ( 10 );
+foreach ( $a as $val )
+	echo $hp2->remove () . " ";
 ?>

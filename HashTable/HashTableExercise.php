@@ -1,6 +1,7 @@
 <?php
 require_once ("Set.php");
 require_once ("Counter.php");
+
 Function main() {
 	$First = "hello";
 	$second = "elloh";
@@ -44,10 +45,11 @@ Function main() {
 	
 	printFirstRepeating ( $arr1 );
 }
-main ();
+main();
+
 Function isAnagram($str1, $str2) {
-	$sizel = count ( $str1 );
-	$size2 = count ( $str2 );
+	$sizel = strlen ( $str1 );
+	$size2 = strlen ( $str2 );
 	if ($sizel != $size2)
 		return FALSE;
 	$cm = new Counter ();

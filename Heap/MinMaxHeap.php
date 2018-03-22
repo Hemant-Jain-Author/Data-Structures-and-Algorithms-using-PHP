@@ -33,34 +33,32 @@ class MedianHeap {
 			return $this->minHeap->peek ();
 	}
 }
-Function main() {
-	$arr = array (
-			1,
-			9,
-			2,
-			8,
-			3,
-			7,
-			4,
-			5,
-			5,
-			1,
-			9,
-			2,
-			8,
-			3,
-			7,
-			4,
-			5,
-			5,
-			10,
-			10
-	);
-	$hp = new MedianHeap ();
-	For($i = 0; ($i < 20); ++ $i) {
-		$hp->insert ( $arr [$i] );
-		echo ("Median after insertion of " . $arr [$i] . " is " . $hp->getMedian ()."<br/>");
-	}
+
+$arr = array (
+		1,
+		9,
+		2,
+		8,
+		3,
+		7,
+		4,
+		5,
+		5,
+		1,
+		9,
+		2,
+		8,
+		3,
+		7,
+		4,
+		5,
+		5,
+		10,
+		10
+);
+$hp = new MedianHeap ();
+For($i = 0; ($i < 20); ++ $i) {
+	$hp->insert ( $arr [$i] );
+	echo ("Median after insertion of " . $arr [$i] . " is " . $hp->getMedian ()."<br/>");
 }
-main();
 ?>

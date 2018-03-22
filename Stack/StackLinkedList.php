@@ -56,15 +56,13 @@ class Stack {
 		}
 	}
 }
-Function main() {
-	$s = new Stack ();
-	for($i = 1; ($i <= 100); ++ $i) {
-		$s->push ( $i );
-	}
-	for($i = 1; ($i <= 50); ++ $i) {
-		$s->pop ();
-	}
-	$s->display ();
+
+$s = new Stack ();
+for($i = 1; ($i <= 100); ++ $i) {
+	$s->push ( $i );
 }
-main ();
+for($i = 1; ($i <= 50); ++ $i) {
+	$s->pop ();
+}
+$s->display ();
 ?>

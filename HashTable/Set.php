@@ -81,23 +81,22 @@ class Set {
 	}
 }
 Set::__staticinit ();
-/*Function main() {
-	$ht = new Set ( 1000 );
-	$ht->Add ( 89 );
-	$ht->Add ( 89 );
-	$ht->Add ( 18 );
-	$ht->Add ( 49 );
-	$ht->Add ( 58 );
-	$ht->Add ( 69 );
-	$ht->Display ();
+/*
+$ht = new Set ( 1000 );
+$ht->Add ( 89 );
+$ht->Add ( 89 );
+$ht->Add ( 18 );
+$ht->Add ( 49 );
+$ht->Add ( 58 );
+$ht->Add ( 69 );
+$ht->Display ();
 	
-	$ht->Delete ( 89 );
-	$ht->Delete ( 49 );
-	$ht->Delete ( 58 );
-	$ht->Delete ( 69 );
-	$ht->Display ();
-}
-main ();
+$ht->Delete ( 89 );
+$ht->Delete ( 49 );
+$ht->Delete ( 58 );
+$ht->Delete ( 69 );
+$ht->Display ();
+
 */
 ?>
 

@@ -19,23 +19,21 @@ Function BucketSort(&$arr, $lowerRange, $upperRange) {
 		}
 	}
 }
-Function main() {
-	$arr = array (
-			23,
-			24,
-			22,
-			21,
-			25,
-			25,
-			27,
-			28,
-			21,
-			21 
-	);
-	BucketSort ( $arr, 20, 30 );
-	For($i = 0; $i < count ( $arr ); $i ++) {
-		echo ($arr [$i]);
-	}
+
+$arr = array (
+		23,
+		24,
+		22,
+		21,
+		25,
+		25,
+		27,
+		28,
+		21,
+		21 
+);
+BucketSort ( $arr, 20, 30 );
+For($i = 0; $i < count ( $arr ); $i ++) {
+	echo ($arr [$i]);
 }
-main ();
 ?>

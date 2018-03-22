@@ -1,12 +1,10 @@
 <?php
-Function main() {
-	$arr = array ();
-	For($i = 0; $i < 10; ++ $i) {
-		$arr [$i] = $i;
-	}
-	For($i = 0; $i < 10; ++ $i) {
-		echo ($arr [$i] . " ");
-	}
+$arr = array ();
+For($i = 0; $i < 10; ++ $i) {
+	$arr [$i] = $i;
 }
-main ();
+For($i = 0; $i < 10; ++ $i) {
+	echo ($arr [$i] . " ");
+}
+
 ?>

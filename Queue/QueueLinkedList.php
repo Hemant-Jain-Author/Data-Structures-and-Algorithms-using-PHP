@@ -54,17 +54,15 @@ class Queue {
 		echo ("<br/>");
 	}
 }
-Function main() {
-	$q = new Queue ();
-	for($i = 1; ($i <= 100); ++ $i) {
-		$q->push ( $i );
-	}
-	for($i = 1; ($i <= 50); ++ $i) {
-		$q->pop ();
-	}
-	$q->display ();
+
+$q = new Queue ();
+for($i = 1; ($i <= 100); ++ $i) {
+	$q->push ( $i );
 }
-main();
+for($i = 1; ($i <= 50); ++ $i) {
+	$q->pop ();
+}
+$q->display ();
 ?>
 
 

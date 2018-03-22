@@ -33,8 +33,8 @@ class StrStr {
 			$powm = (($powm << 1) % $prime);
 		}
 		for($i = 0; $i < $m; ++ $i) {
-			$PatternHash = ((($PatternHash << 1) + $pattern [$i]) % $prime);
-			$TextHash = ((($TextHash << 1) + $text [$i]) % $prime);
+			$PatternHash = ((($PatternHash << 1) + ord($pattern[$i])) % $prime);
+			$TextHash = ((($TextHash << 1) + ord($text [$i])) % $prime);
 		}
 		for($i = 0; $i <= ($n - $m); ++ $i) {
 			if (($TextHash == $PatternHash)) {
@@ -46,7 +46,7 @@ class StrStr {
 				if ($j == $m)
 					return $i;
 			}
-			$TextHash = (((($TextHash - ($text [$i] * $powm)) << 1) + $text [$i + $m]) % $prime);
+			$TextHash = (((($TextHash - (ord($text[$i]) * $powm)) << 1) + ord($text[$i + $m])) % $prime);
 			if ($TextHash < 0) {
 				$TextHash = ($TextHash + $prime);
 			}
@@ -108,14 +108,12 @@ class StrStr {
 		return $count;
 	}
 }
-Function main() {
-	$st1 = "hello, world!";
-	$st2 = "world";
-	$algo = new StrStr ();
-	echo ("BruteForceSearch return : " . $algo->BruteForceSearch ( $st1, $st2 ) . "<br/>");
-	echo ("RobinKarp return : " . $algo->RobinKarp ( $st1, $st2 ) . "<br/>");
-	echo ("KMP return : " . $algo->KMP ( $st1, $st2 ) . "<br/>");
-	echo ("KMP return : " . $algo->KMPFindCount ( $st1, $st2 ) . "<br/>");
-}
-main ();
+
+$st1 = "hello, world!";
+$st2 = "world";
+$algo = new StrStr ();
+echo ("BruteForceSearch return : " . $algo->BruteForceSearch ( $st1, $st2 ) . "<br/>");
+echo ("RobinKarp return : " . $algo->RobinKarp ( $st1, $st2 ) . "<br/>");
+echo ("KMP return : " . $algo->KMP ( $st1, $st2 ) . "<br/>");
+echo ("KMP return : " . $algo->KMPFindCount ( $st1, $st2 ) . "<br/>");
 ?>

@@ -38,22 +38,20 @@ Function SelectionSort2(&$arr) {
 		$arr [$min] = $temp;
 	}
 }
-Function main() {
-	$arr = array (
-			9,
-			1,
-			8,
-			2,
-			7,
-			3,
-			6,
-			4,
-			5 
-	);
-	SelectionSort ( $arr );
-	For($i = 0; $i < count ( $arr ); ++ $i) {
-		echo ($arr [$i] . " ");
-	}
+
+$arr = array (
+		9,
+		1,
+		8,
+		2,
+		7,
+		3,
+		6,
+		4,
+		5 
+);
+SelectionSort ( $arr );
+For($i = 0; $i < count ( $arr ); ++ $i) {
+	echo ($arr [$i] . " ");
 }
-main ();
 ?>

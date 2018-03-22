@@ -31,23 +31,21 @@ Function quickSelectWrapper(&$arr, $k) {
 	quickSelect ( $arr, 0, (count ( $arr ) - 1), $k - 1 ); // Kth element at k-1 index.
 	return $arr [$k - 1];
 }
-Function main() {
-	$arr = Array (
-			3,
-			4,
-			2,
-			1,
-			6,
-			5,
-			9,
-			8,
-			10,
-			7 
-	);
+
+$arr = Array (
+		3,
+		4,
+		2,
+		1,
+		6,
+		5,
+		9,
+		8,
+		10,
+		7 
+);
 	
-	echo ("value at index 7 is : " . quickSelectWrapper ( $arr, 7 ));
-}
-main ();
+echo ("value at index 7 is : " . quickSelectWrapper ( $arr, 7 ));
 ?>
 
 

@@ -335,7 +335,7 @@ Function main() {
 	$gph->AddBiEdge ( 5, 7, 1 );
 	$gph->AddBiEdge ( 5, 7, 7 );
 	$gph->AddBiEdge ( 7, 8, 17 );
-	//Dijkstra ( $gph, 1 );
+	Dijkstra ( $gph, 1 );
 	Prims($gph);
 }
 Function main2() {
@@ -349,6 +349,6 @@ Function main2() {
 	echo ("Following is the Topological Sort of the given Graph.<br/>");
 	TopologicalSort ( $g );
 }
-
+main ();
 main2 ();
 ?>

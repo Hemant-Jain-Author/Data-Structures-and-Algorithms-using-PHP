@@ -189,27 +189,25 @@ class DoublyLinkedList {
 		return $dll;
 	}
 }
-FUNCTION main() {
-	$ll = new DoublyLinkedList ();
-	$ll->addHead ( 1 );
-	$ll->addHead ( 2 );
-	$ll->addHead ( 3 );
-	$ll->addHead ( 4 );
-	$ll->addHead ( 5 );
-	$ll->addHead ( 5 );
-	$ll->display ();
-	$ll->removeHead ();
-	$ll->display ();
-	$ll->freeList ();
-	$ll->display ();
-	echo ($ll->isEmpty () ? "empty" : "not empty")."<br/>";
-	$ll->addHead ( 11 );
-	$ll->addHead ( 21 );
-	$ll->addHead ( 31 );
-	$ll->addHead ( 41 );
-	$ll->addHead ( 51 );
-	$ll->addHead ( 51 );
-	$ll->display ();
-}
-main ();
+
+$ll = new DoublyLinkedList ();
+$ll->addHead ( 1 );
+$ll->addHead ( 2 );
+$ll->addHead ( 3 );
+$ll->addHead ( 4 );
+$ll->addHead ( 5 );
+$ll->addHead ( 5 );
+$ll->display ();
+$ll->removeHead ();
+$ll->display ();
+$ll->freeList ();
+$ll->display ();
+echo ($ll->isEmpty () ? "empty" : "not empty")."<br/>";
+$ll->addHead ( 11 );
+$ll->addHead ( 21 );
+$ll->addHead ( 31 );
+$ll->addHead ( 41 );
+$ll->addHead ( 51 );
+$ll->addHead ( 51 );
+$ll->display ();
 ?>

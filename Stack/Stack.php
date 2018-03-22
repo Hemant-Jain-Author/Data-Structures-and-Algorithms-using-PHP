@@ -40,17 +40,14 @@ class Stack {
 		}
 	}
 }
-Function main() {
-	$s = new Stack ();
-	For($i = 1; $i <= 100; ++ $i) {
-		$s->push ( $i );
-	}
-	For($i = 1; ($i <= 50); ++ $i) {
-		$s->pop ();
-	}
-	$s->display ();
-}
-
 Stack::__staticinit (); // initialize static vars For this class on load
-main ();
+
+$s = new Stack ();
+For($i = 1; $i <= 100; ++ $i) {
+	$s->push ( $i );
+}
+For($i = 1; ($i <= 50); ++ $i) {
+	$s->pop ();
+}
+$s->display ();
 ?>

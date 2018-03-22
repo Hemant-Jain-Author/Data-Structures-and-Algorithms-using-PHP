@@ -296,30 +296,29 @@ Function main11() {
 	printArray ( $arr, 9 );
 	return 0;
 }
+/*
 Function main12() {
-	/*
-	 * $point = new coord ();
-	 * $point->x = 10;
-	 * $point->y = 10;
-	 * echo ("K axis coord value is " . $point->x);
-	 * echo ("Y axis coord value is " . $point->y);
-	 * echo ("<br/>");
-	 * return 0;
-	 */
+	$point = new coord ();
+	$point->x = 10;
+	$point->y = 10;
+	echo ("K axis coord value is " . $point->x);
+	echo ("Y axis coord value is " . $point->y);
+	echo ("<br/>");
+	return 0;
+
 }
 Function main13() {
-	/*
-	 * $stud = new student ();
-	 * $refStud = null;
-	 * $refStud = $stud;
-	 * $refStud->rollNo = 1;
-	 * $refStud->FirstName = "john";
-	 * $refStud->lastName = "smith";
-	 * echo ("Roll No:" . $refStud->rollNo . " Student Name:" . $refStud->FirstName . " " . $refStud->lastName);
-	 * echo ("<br/>");
-	 * return 0;
-	 */
-}
+
+	$stud = new student ();
+	$refStud = null;
+	$refStud = $stud;
+	$refStud->rollNo = 1;
+	$refStud->FirstName = "john";
+	$refStud->lastName = "smith";
+	echo ("Roll No:" . $refStud->rollNo . " Student Name:" . $refStud->FirstName . " " . $refStud->lastName);
+	echo ("<br/>");
+	return 0;
+}*/
 Function sum($num1, $num2) {
 	$result = null;
 	$result = ($num1 + $num2);
@@ -413,19 +412,19 @@ Function main19() {
 	return 0;
 }
 
-// main1 ();
-// main2 ();
-// main3 ();
-// main4 ();
-// main5 ();
-// main6 ();
-// main7 ();
-// main8 ();
-// main9 ();
+main1 ();
+main2 ();
+main3 ();
+main4 ();
+main5 ();
+main6 ();
+main7 ();
+main8 ();
+main9 ();
 main10 ();
 main11 ();
-main12 ();
-main13 ();
+// main12 ();
+// main13 ();
 main14 ();
 main15 ();
 main16 ();

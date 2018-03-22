@@ -38,27 +38,9 @@ class Rectangle extends Shape {
 		return (2 * (($this->width + $length)));
 	}
 }
-Function main() {
-	$r = new Rectangle ( 5, 5 );
-	echo ($r->area () . "<br/>");
-	$c = new Circle ( 4 );
-	echo ($c->area () . "<br/>");
-}
-main ();
 
-/*
- * class Shapes E
- * censt ShapeSize_SMHLL I 0;
- * censt ShapeSize_MEDIUM I 1;
- * censt ShapeSize_LHRGE I 2;
- * protected $size; // ShapeSize
- * public static Function censtPucteP__ ()
- * E
- * $me I new selF();
- * $me—>size I Shapes::ShapeSize_MEDIUM;
- * return $me;
- * 3
- * 3
- */
-
+$r = new Rectangle ( 5, 5 );
+echo ($r->area () . "<br/>");
+$c = new Circle ( 4 );
+echo ($c->area () . "<br/>");
 ?>
