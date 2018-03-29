@@ -67,7 +67,7 @@ Function BinarySearch($arr, $value) {
 	$high = ($size - 1);
 	$mid = NULL;
 	while ( $low <= $high ) {
-		$mid = ( int ) ($low + (($high - $low) / 2));
+		$mid = ( int ) ((low + high) / 2);
 		if ($arr [$mid] == $value) {
 			return TRUE;
 		} else {
@@ -105,7 +105,7 @@ Function BinarySearchRecursiveUtil($arr, $low, $high, $value) {
 	if ($low > $high) {
 		return FALSE;
 	}
-	$mid = ( int ) ($low + (($high - $low) / 2));
+	$mid = ( int ) ((low + high) / 2);
 	if ($arr [$mid] == $value) {
 		return TRUE;
 	} else {
